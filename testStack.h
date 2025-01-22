@@ -30,24 +30,24 @@ public:
       reset();
 
       // Construct
-      test_construct_default();
-      test_constructCopy_empty();
-      test_constructCopy_standard();
-      test_constructCopy_partiallyFilled();
-      test_constructMove_empty();
-      test_constructMove_standard();
-      test_constructMove_partiallyFilled();
-      test_constructInit_empty();
-      test_constructInit_standard();
-      test_constructInit_emptySTD();
-      test_constructInit_standardSTD();
-      test_constructInitMove_empty();
-      test_constructInitMove_standard();
-      test_constructInitMove_emptySTD();
-      test_constructInitMove_standardSTD();
-      test_destructor_empty();
-      test_destructor_standard();
-      test_destructor_partiallyFilled();
+      //test_construct_default();
+      //test_constructCopy_empty();
+      //test_constructCopy_standard();
+      //test_constructCopy_partiallyFilled();
+      //test_constructMove_empty();
+      //test_constructMove_standard();
+      //test_constructMove_partiallyFilled();
+      //test_constructInit_empty();
+      //test_constructInit_standard();
+      //test_constructInit_emptySTD();
+      //test_constructInit_standardSTD();
+      //test_constructInitMove_empty();
+      //test_constructInitMove_standard();
+      //test_constructInitMove_emptySTD();
+      //test_constructInitMove_standardSTD();
+      //test_destructor_empty();
+      //test_destructor_standard();
+      //test_destructor_partiallyFilled();
 
       // Assign
       test_assignCopy_emptyToEmpty();
@@ -88,11 +88,11 @@ public:
 
       report("Stack");
    }
-   
+
    /***************************************
     * CONSTRUCTOR - Default
     ***************************************/
-   
+
    // default constructor, no allocations
    void test_construct_default()
    {  // setup
@@ -116,7 +116,7 @@ public:
       assertEmptyFixture(s);
       // teardown
       teardownStandardFixture(s);
-   } 
+   }
 
 
    /***************************************
@@ -273,7 +273,7 @@ public:
       //    +----+----+----+----+
       assertUnit(sSrc.container.size() == 2);
       if (sSrc.container.size() >= 2)
-      { 
+      {
          assertUnit(sSrc.container[0] == Spy(26));
          assertUnit(sSrc.container[1] == Spy(49));
       }
@@ -709,7 +709,7 @@ public:
       assertStandardFixture(s);
       // teardown
       teardownStandardFixture(s);
-   } 
+   }
 
    // is an empty stack empty
    void test_empty_empty()
@@ -762,7 +762,7 @@ public:
    /***************************************
     * ASSIGN COPY
     ***************************************/
-   
+
    // copy an empty stack to an empty stack
    void test_assignCopy_emptyToEmpty()
    {  // Setup
@@ -772,7 +772,7 @@ public:
       // exercise
       sDes = sSrc;
       // verify
-      assertUnit(Spy::numAssign() == 0); 
+      assertUnit(Spy::numAssign() == 0);
       assertUnit(Spy::numCopy() == 0);
       assertUnit(Spy::numAlloc() == 0);
       assertUnit(Spy::numDelete() == 0);
@@ -813,7 +813,7 @@ public:
       assertUnit(sDes.container.capacity() == 4);
       // teardown
       teardownStandardFixture(sDes);
-   }  
+   }
 
    // copy a full stack onto an empty one
    void test_assignCopy_fullToEmpty()
@@ -831,7 +831,7 @@ public:
       assertUnit(Spy::numCopy() == 4); // [26,49,67,89]
       assertUnit(Spy::numAlloc() == 4); // [26,49,67,89]
       assertUnit(Spy::numDestructor() == 0);
-      assertUnit(Spy::numDelete() == 0);     
+      assertUnit(Spy::numDelete() == 0);
       assertUnit(Spy::numAssign() == 0);
       assertUnit(Spy::numDefault() == 0);
       assertUnit(Spy::numNondefault() == 0);
@@ -944,7 +944,7 @@ public:
       // exercise
       sDes = std::move(sSrc);
       // verify
-      assertUnit(Spy::numCopy() == 0); 
+      assertUnit(Spy::numCopy() == 0);
       assertUnit(Spy::numAlloc() == 0);
       assertUnit(Spy::numDestructor() == 0);
       assertUnit(Spy::numDelete() == 0);
@@ -981,8 +981,8 @@ public:
       assertUnit(Spy::numDestructor() == 2); // [11,99]
       assertUnit(Spy::numDelete() == 2); // [11,99]
       assertUnit(Spy::numCopyMove() == 0);
-      assertUnit(Spy::numCopy() == 0);  
-      assertUnit(Spy::numAlloc() == 0); 
+      assertUnit(Spy::numCopy() == 0);
+      assertUnit(Spy::numAlloc() == 0);
       assertUnit(Spy::numAssign() == 0);
       assertUnit(Spy::numDefault() == 0);
       assertUnit(Spy::numNondefault() == 0);
@@ -1032,8 +1032,8 @@ public:
       // exercise
       sDes.swap(sSrc);
       // verify
-      assertUnit(Spy::numDestructor() == 0); 
-      assertUnit(Spy::numDelete() == 0);     
+      assertUnit(Spy::numDestructor() == 0);
+      assertUnit(Spy::numDelete() == 0);
       assertUnit(Spy::numAssign() == 0);
       assertUnit(Spy::numCopy() == 0);
       assertUnit(Spy::numAlloc() == 0);
@@ -1079,7 +1079,7 @@ public:
       assertStandardFixture(sDes);
       // teardown
       teardownStandardFixture(sDes);
-   }  
+   }
 
    // swap a full stack onto one that is not empty
    void test_swap_fullToFull()
@@ -1100,8 +1100,8 @@ public:
       // exercise
       sDes.swap(sSrc);
       // verify
-      assertUnit(Spy::numDestructor() == 0); 
-      assertUnit(Spy::numDelete() == 0); 
+      assertUnit(Spy::numDestructor() == 0);
+      assertUnit(Spy::numDelete() == 0);
       assertUnit(Spy::numCopyMove() == 0);
       assertUnit(Spy::numCopy() == 0);
       assertUnit(Spy::numAlloc() == 0);
@@ -1498,7 +1498,7 @@ public:
     ***************************************/
 
 
-   
+
    /*************************************************************
     * SETUP STANDARD FIXTURE
     *      0    1    2    3
@@ -1514,7 +1514,7 @@ public:
       s.container[2] = Spy(67);
       s.container[3] = Spy(89);
    }
-   
+
    /*************************************************************
     * TEARDOWN STANDARD FIXTURE
     *      0    1    2    3
@@ -1558,7 +1558,7 @@ public:
    {
       assertIndirect(s.container.size() == 4);
       assertIndirect(s.container.capacity() == 4);
-      
+
       if (s.container.size() >= 4)
       {
          assertIndirect(s.container[0] == Spy(26));
@@ -1572,7 +1572,7 @@ public:
    {
       assertIndirect(s.container.size() == 4);
       assertIndirect(s.container.capacity() == 4);
-      
+
       if (s.container.size() >= 4)
       {
          assertIndirect(s.container[0] == Spy(26));

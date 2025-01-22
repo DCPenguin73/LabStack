@@ -40,18 +40,18 @@ class stack
 {
    friend class ::TestStack; // give unit tests access to the privates
 public:
-  
+
    //
    // Construct
    //
-   
+
    stack() : container()                      { }
    stack(const stack <T> &  rhs) : container(rhs.container) { }
    stack(      stack <T> && rhs) : container(std::move(rhs.container)) { }
    stack(const Container &  rhs) : container(rhs) { }
    stack(      Container && rhs) : container(std::move(rhs)) { }
-   ~stack()                      {                      }     
-   
+   ~stack()                      {                      }
+
    //
    // Assign
    //
@@ -100,26 +100,25 @@ public:
    //
    // Remove
    //
-   
-   void pop() 
-   {  
-   
+
+   void pop()
+   {
+
    }
 
    //
    // Status
    //
-   
+
    size_t size () const { return container.size();   }
    bool   empty() const { return container.empty(); }
-   
+
+
 private:
-   
+
    Container container;  // underlying container (probably a vector)
 };
 
 
 
 } // custom namespace
-
-
