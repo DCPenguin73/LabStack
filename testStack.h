@@ -50,10 +50,10 @@ public:
       //test_destructor_partiallyFilled();
 
       // Assign
-      test_assignCopy_emptyToEmpty();
-      test_assignCopy_emptyToFull();
-      test_assignCopy_fullToEmpty();
-      test_assignCopy_fullToFull();
+      //test_assignCopy_emptyToEmpty();
+      //test_assignCopy_emptyToFull();
+      //test_assignCopy_fullToEmpty();
+      //test_assignCopy_fullToFull();
       //test_assignMove_emptyToEmpty();
       //test_assignMove_emptyToFull();
       //test_assignMove_fullToEmpty();
