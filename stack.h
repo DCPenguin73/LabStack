@@ -14,6 +14,11 @@
  *       stack             : similar to std::stack
  * Author
  *    Daniel Carr, Jarom Anderson, Arllo Jolly
+ * 
+ * Time spent:
+ *    Arlo: 2 hours
+ *    Daniel: 2 hours
+ *    Jarom:
  ************************************************************************/
 
 #pragma once
