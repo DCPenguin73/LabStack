@@ -23,7 +23,7 @@
 #include <cstddef>
 #include <new>      // std::bad_alloc
 #include <memory>   // for std::allocator
-#include <initializer_list> // for std::initializer_list
+#include <initializer_list> // for std::initializer
 
 class TestVector; // forward declaration for unit tests
 class TestStack;
