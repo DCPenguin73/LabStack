@@ -52,10 +52,20 @@ public:
    //
    stack <T> & operator = (const stack <T> & rhs)
    {
+      //container = rhs.container
+      this->container = rhs.container;
       return *this;
    }
    stack <T>& operator = (stack <T> && rhs)
    {
+      /*
+      FOR i = 0 ... rhs.numElements
+         array[i] = rhs.array[i] 
+      numElements = rhs.numElements
+      */
+      /*for (int i = 0; i < rhs.size(); i++)
+         this->container[i] = rhs.container[i];
+      container.numElements = rhs.size();*/
       return *this;
    }
    void swap(stack <T>& rhs)
