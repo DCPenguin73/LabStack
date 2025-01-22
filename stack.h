@@ -13,7 +13,7 @@
  *    This will contain the class definition of:
  *       stack             : similar to std::stack
  * Author
- *    <your names here>
+ *    Daniel Carr, Jarom Anderson, Arllo Jolly
  ************************************************************************/
 
 #pragma once
@@ -40,11 +40,11 @@ public:
    // Construct
    //
    
-   stack()                       { container.resize(7); }
-   stack(const stack <T> &  rhs) { container.resize(7); }
-   stack(      stack <T> && rhs) { container.resize(7); }
-   stack(const Container &  rhs) { container.resize(7); }
-   stack(      Container && rhs) { container.resize(7); }
+   stack() : container()                      { }
+   stack(const stack <T> &  rhs) : container(rhs.container) { }
+   stack(      stack <T> && rhs) : container(std::move(rhs.container)) { }
+   stack(const Container &  rhs) : container(rhs) { }
+   stack(      Container && rhs) : container(std::move(rhs)) { }
    ~stack()                      {                      }     
    
    //
@@ -102,8 +102,8 @@ public:
    // Status
    //
    
-   size_t size () const { return 99;   }
-   bool   empty() const { return true; }
+   size_t size () const { return container.size();   }
+   bool   empty() const { return container.empty(); }
    
 private:
    

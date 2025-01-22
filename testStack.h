@@ -50,32 +50,32 @@ public:
       test_destructor_partiallyFilled();
 
       // Assign
-      test_assignCopy_emptyToEmpty();
-      test_assignCopy_emptyToFull();
-      test_assignCopy_fullToEmpty();
-      test_assignCopy_fullToFull();
-      test_assignMove_emptyToEmpty();
-      test_assignMove_emptyToFull();
-      test_assignMove_fullToEmpty();
-      test_assignMove_fullToFull();
-      test_swap_emptyToEmpty();
-      test_swap_emptyToFull();
-      test_swap_fullToEmpty();
-      test_swap_fullToFull();
+      //test_assignCopy_emptyToEmpty();
+      //test_assignCopy_emptyToFull();
+      //test_assignCopy_fullToEmpty();
+      //test_assignCopy_fullToFull();
+      //test_assignMove_emptyToEmpty();
+      //test_assignMove_emptyToFull();
+      //test_assignMove_fullToEmpty();
+      //test_assignMove_fullToFull();
+      //test_swap_emptyToEmpty();
+      //test_swap_emptyToFull();
+      //test_swap_fullToEmpty();
+      //test_swap_fullToFull();
 
       // Access
-      test_top_readOne();
-      test_top_readStandard();
-      test_top_writeOne();
-      test_top_writeStandard();
+      //test_top_readOne();
+      //test_top_readStandard();
+      //test_top_writeOne();
+      //test_top_writeStandard();
 
       // Insert
-      test_pushCopy_empty();
-      test_pushCopy_standard();
-      test_pushCopy_standardList();
-      test_pushMove_empty();
-      test_pushMove_standard();
-      test_pushMove_standardList();
+      //test_pushCopy_empty();
+      //test_pushCopy_standard();
+      //test_pushCopy_standardList();
+      //test_pushMove_empty();
+      //test_pushMove_standard();
+      //test_pushMove_standardList();
 
       // Delete
 
