@@ -62,6 +62,7 @@ namespace custom
       void swap(vector& rhs);
       vector& operator = (const vector& rhs);
       vector& operator = (vector&& rhs);
+      //vector move(vector& rhs) { return *this; }
 
       //
       // Iterator
@@ -116,7 +117,7 @@ namespace custom
       //
       size_t  size()          const { return numElements; }
       size_t  capacity()      const { return numCapacity; }
-      bool empty()            const { return (numCapacity == 0) ? true : false; }
+      bool empty()            const { return (numElements == 0); }
 
    private:
 

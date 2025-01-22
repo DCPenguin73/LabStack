@@ -52,15 +52,18 @@ public:
    //
    stack <T> & operator = (const stack <T> & rhs)
    {
+      if (this != &rhs)
+         container = rhs.container;
       return *this;
    }
    stack <T>& operator = (stack <T> && rhs)
    {
+      container = std::move(rhs.container);
       return *this;
    }
    void swap(stack <T>& rhs)
    {
-
+      container.swap(rhs.container);
    }
 
    //
@@ -69,11 +72,11 @@ public:
    
    T & top()       
    { 
-      return *(new T); 
+      return container.back(); 
    }
    const T & top() const 
    { 
-      return *(new T); 
+      return  container.back();;    // ask about this
    }
 
    //
@@ -82,11 +85,11 @@ public:
    
    void push(const T &  t) 
    {  
-   
+      container.push_back(t);
    }
    void push(      T && t) 
    {  
-   
+      container.push_back(std::move(t));
    }
 
    //
