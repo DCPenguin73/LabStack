@@ -35,18 +35,18 @@ class stack
 {
    friend class ::TestStack; // give unit tests access to the privates
 public:
-  
+
    //
    // Construct
    //
-   
-   stack()                       { container.resize(7); }
+
+   stack() : container()         {}
    stack(const stack <T> &  rhs) { container.resize(7); }
    stack(      stack <T> && rhs) { container.resize(7); }
    stack(const Container &  rhs) { container.resize(7); }
    stack(      Container && rhs) { container.resize(7); }
-   ~stack()                      {                      }     
-   
+   ~stack()                      {                      }
+
    //
    // Assign
    //
@@ -66,52 +66,50 @@ public:
    //
    // Access
    //
-   
-   T & top()       
-   { 
-      return *(new T); 
+
+   T & top()
+   {
+      return *(new T);
    }
-   const T & top() const 
-   { 
-      return *(new T); 
+   const T & top() const
+   {
+      return *(new T);
    }
 
    //
    // Insert
    //
-   
-   void push(const T &  t) 
-   {  
-   
+
+   void push(const T &  t)
+   {
+
    }
-   void push(      T && t) 
-   {  
-   
+   void push(      T && t)
+   {
+
    }
 
    //
    // Remove
    //
-   
-   void pop() 
-   {  
-   
+
+   void pop()
+   {
+
    }
 
    //
    // Status
    //
-   
-   size_t size () const { return 99;   }
-   bool   empty() const { return true; }
-   
+
+   size_t size () const { return container.size();   }
+   bool   empty() const { return container.empty(); }
+
 private:
-   
+
    Container container;  // underlying container (probably a vector)
 };
 
 
 
 } // custom namespace
-
-
