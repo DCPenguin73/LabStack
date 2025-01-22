@@ -125,7 +125,7 @@ public:
    //
    size_t  size()          const { return numElements;}
    size_t  capacity()      const { return numCapacity;}
-   bool empty()            const { return (numCapacity == 0) ? true : false ;}
+   bool empty()            const { return (numElements == 0);}
 
 private:
 
