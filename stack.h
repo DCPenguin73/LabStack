@@ -14,6 +14,11 @@
  *       stack             : similar to std::stack
  * Author
  *    Daniel Carr, Jarom Anderson, Arllo Jolly
+ * 
+ * Time spent:
+ *    Arlo: 2 hours
+ *    Daniel: 2 hours
+ *    Jarom:
  ************************************************************************/
 
 #pragma once
@@ -52,51 +57,44 @@ public:
    //
    stack <T> & operator = (const stack <T> & rhs)
    {
-      //container = rhs.container
-      this->container = rhs.container;
+      if (this != &rhs)
+         container = rhs.container;
       return *this;
    }
    stack <T>& operator = (stack <T> && rhs)
    {
-      /*
-      FOR i = 0 ... rhs.numElements
-         array[i] = rhs.array[i]
-      numElements = rhs.numElements
-      */
-      /*for (int i = 0; i < rhs.size(); i++)
-         this->container[i] = rhs.container[i];
-      container.numElements = rhs.size();*/
+      container = std::move(rhs.container);
       return *this;
    }
    void swap(stack <T>& rhs)
    {
-
+      container.swap(rhs.container);
    }
 
    //
    // Access
    //
-
-   T & top()
-   {
-      return *(new T);
+   
+   T & top()       
+   { 
+      return container.back(); 
    }
-   const T & top() const
-   {
-      return *(new T);
+   const T & top() const 
+   { 
+      return  container.back();;    // ask about this
    }
 
    //
    // Insert
    //
-
-   void push(const T &  t)
-   {
-
+   
+   void push(const T &  t) 
+   {  
+      container.push_back(t);
    }
-   void push(      T && t)
-   {
-
+   void push(      T && t) 
+   {  
+      container.push_back(std::move(t));
    }
 
    //
