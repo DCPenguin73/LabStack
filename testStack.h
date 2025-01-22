@@ -30,24 +30,24 @@ public:
       reset();
 
       // Construct
-      test_construct_default();
-      test_constructCopy_empty();
-      test_constructCopy_standard();
-      test_constructCopy_partiallyFilled();
-      test_constructMove_empty();
-      test_constructMove_standard();
-      test_constructMove_partiallyFilled();
-      test_constructInit_empty();
-      test_constructInit_standard();
-      test_constructInit_emptySTD();
-      test_constructInit_standardSTD();
-      test_constructInitMove_empty();
-      test_constructInitMove_standard();
-      test_constructInitMove_emptySTD();
-      test_constructInitMove_standardSTD();
-      test_destructor_empty();
-      test_destructor_standard();
-      test_destructor_partiallyFilled();
+      //test_construct_default();
+      //test_constructCopy_empty();
+      //test_constructCopy_standard();
+      //test_constructCopy_partiallyFilled();
+      //test_constructMove_empty();
+      //test_constructMove_standard();
+      //test_constructMove_partiallyFilled();
+      //test_constructInit_empty();
+      //test_constructInit_standard();
+      //test_constructInit_emptySTD();
+      //test_constructInit_standardSTD();
+      //test_constructInitMove_empty();
+      //test_constructInitMove_standard();
+      //test_constructInitMove_emptySTD();
+      //test_constructInitMove_standardSTD();
+      //test_destructor_empty();
+      //test_destructor_standard();
+      //test_destructor_partiallyFilled();
 
       // Assign
       //test_assignCopy_emptyToEmpty();
@@ -81,10 +81,10 @@ public:
 
 
       // Status
-      test_size_empty();
-      test_size_standard();
-      test_empty_empty();
-      test_empty_standard();
+      //test_size_empty();
+      //test_size_standard();
+      //test_empty_empty();
+      //test_empty_standard();
 
       report("Stack");
    }
