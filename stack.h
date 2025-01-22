@@ -13,7 +13,7 @@
  *    This will contain the class definition of:
  *       stack             : similar to std::stack
  * Author
- *    <your names here>
+ *    Daniel Carr, Jarom Anderson, Arllo Jolly
  ************************************************************************/
 
 #pragma once
@@ -40,11 +40,11 @@ public:
    // Construct
    //
 
-   stack() : container()         {}
-   stack(const stack <T> &  rhs) { container.resize(7); }
-   stack(      stack <T> && rhs) { container.resize(7); }
-   stack(const Container &  rhs) { container.resize(7); }
-   stack(      Container && rhs) { container.resize(7); }
+   stack() : container()                      { }
+   stack(const stack <T> &  rhs) : container(rhs.container) { }
+   stack(      stack <T> && rhs) : container(std::move(rhs.container)) { }
+   stack(const Container &  rhs) : container(rhs) { }
+   stack(      Container && rhs) : container(std::move(rhs)) { }
    ~stack()                      {                      }
 
    //
@@ -52,10 +52,20 @@ public:
    //
    stack <T> & operator = (const stack <T> & rhs)
    {
+      //container = rhs.container
+      this->container = rhs.container;
       return *this;
    }
    stack <T>& operator = (stack <T> && rhs)
    {
+      /*
+      FOR i = 0 ... rhs.numElements
+         array[i] = rhs.array[i]
+      numElements = rhs.numElements
+      */
+      /*for (int i = 0; i < rhs.size(); i++)
+         this->container[i] = rhs.container[i];
+      container.numElements = rhs.size();*/
       return *this;
    }
    void swap(stack <T>& rhs)
@@ -104,6 +114,7 @@ public:
 
    size_t size () const { return container.size();   }
    bool   empty() const { return container.empty(); }
+
 
 private:
 

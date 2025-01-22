@@ -1,0 +1,3 @@
+/home/jarbear82/Documents/CSE232/LabStack/build/CMakeFiles/LabStack.dir
+/home/jarbear82/Documents/CSE232/LabStack/build/CMakeFiles/edit_cache.dir
+/home/jarbear82/Documents/CSE232/LabStack/build/CMakeFiles/rebuild_cache.dir
