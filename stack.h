@@ -18,7 +18,7 @@
  * Time spent:
  *    Arlo: 2 hours
  *    Daniel: 2 hours
- *    Jarom:
+ *    Jarom: 1.5 hours
  ************************************************************************/
 
 #pragma once
@@ -45,12 +45,12 @@ public:
    // Construct
    //
 
-   stack() : container()                      { }
-   stack(const stack <T> &  rhs) : container(rhs.container) { }
+   stack()                       : container()                         { }
+   stack(const stack <T> &  rhs) : container(rhs.container)            { }
    stack(      stack <T> && rhs) : container(std::move(rhs.container)) { }
-   stack(const Container &  rhs) : container(rhs) { }
-   stack(      Container && rhs) : container(std::move(rhs)) { }
-   ~stack()                      {                      }
+   stack(const Container &  rhs) : container(rhs)                      { }
+   stack(      Container && rhs) : container(std::move(rhs))           { }
+   ~stack()                                                            { }
 
    //
    // Assign
@@ -81,7 +81,7 @@ public:
    }
    const T & top() const
    {
-      return  container.back();;    // ask about this
+      return  container.back();
    }
 
    //
@@ -103,14 +103,14 @@ public:
 
    void pop()
    {
-      container.pop_back(); // only works with vector
+      container.pop_back();
    }
 
    //
    // Status
    //
 
-   size_t size () const { return container.size();   }
+   size_t size () const { return container.size();  }
    bool   empty() const { return container.empty(); }
 
 
