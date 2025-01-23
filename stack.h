@@ -14,7 +14,7 @@
  *       stack             : similar to std::stack
  * Author
  *    Daniel Carr, Jarom Anderson, Arllo Jolly
- * 
+ *
  * Time spent:
  *    Arlo: 2 hours
  *    Daniel: 2 hours
@@ -74,26 +74,26 @@ public:
    //
    // Access
    //
-   
-   T & top()       
-   { 
-      return container.back(); 
+
+   T & top()
+   {
+      return container.back();
    }
-   const T & top() const 
-   { 
+   const T & top() const
+   {
       return  container.back();;    // ask about this
    }
 
    //
    // Insert
    //
-   
-   void push(const T &  t) 
-   {  
+
+   void push(const T &  t)
+   {
       container.push_back(t);
    }
-   void push(      T && t) 
-   {  
+   void push(      T && t)
+   {
       container.push_back(std::move(t));
    }
 
@@ -103,7 +103,7 @@ public:
 
    void pop()
    {
-
+      container.pop_back(); // only works with vector
    }
 
    //
