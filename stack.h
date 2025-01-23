@@ -55,6 +55,7 @@ public:
    //
    // Assign
    //
+
    stack <T> & operator = (const stack <T> & rhs)
    {
       if (this != &rhs)
